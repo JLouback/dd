@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: John Doe
+  email: abc@example.com
+  cpf: '123'
+
+two:
+  name: Jane Doe
+  email: def@example.com
+  cpf: '456'
