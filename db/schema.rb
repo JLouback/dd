@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170730222645) do
+ActiveRecord::Schema.define(version: 20170805191036) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 20170730222645) do
     t.date     "dob"
     t.string   "city"
     t.string   "state"
-    t.boolean  "surgery"
+    t.string   "surgery"
     t.string   "surgeryDescription"
-    t.boolean  "cancer"
+    t.string   "cancer"
     t.string   "cancerDescription"
-    t.boolean  "allergy"
+    t.string   "allergy"
     t.string   "allergyDescription"
     t.boolean  "asthma"
     t.boolean  "rhinitis"

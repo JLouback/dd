@@ -104,3 +104,73 @@ footer {
     }
   }
 }
+
+h1 {
+  text-align: left;
+}
+
+#contact-form {
+  width: 80%;
+}
+
+#contact-form #contact-submit {
+  margin-top: 10px;
+}
+
+#signup-form {
+  width: 80%;
+}
+
+#signup-form input {
+  margin-bottom: 10px;
+}
+
+#signup-form input[type="radio"] {
+  margin-left: 5px;
+  clear: right;
+}
+
+#signup-form input[type="date"] {
+  width: 50%;
+  clear: right;
+}
+
+#signup-form #user_state {
+  width: 60px;
+}
+
+.signup-comment {
+  rows: 3;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#error_explanation {
+  color: $state-danger-text;
+  ul {
+    color: $state-danger-text;
+    margin: 0 0 0 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+#signup-city {
+  display: inline-block;
+  width: calc(50% - 66px);
+}
+
+#signup-state {
+  display: inline-block;
+  width: 66px;
+  margin-left: 4px;
+}
+
+.signup-half {
+  width: 50%;
+}

@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+en:
+  errors:
+    messages:
+      confirmation: "A senha e a confirmacao nao sao iguais."

@@ -1,2 +1,87 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Cadastro</h1>
+<i>Todos os campos marcados com * sao obrigatorios</i>
+
+<div id="signup-form">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.label :email, 'E-mail*'%>
+      <%= f.email_field :email, class: 'form-control'  %>
+
+      <%= f.label :password, 'Senha*' %>
+      <%= f.password_field :password, class: 'form-control'  %>
+
+      <%= f.label :password_confirmation, 'Confirmar senha*' %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label :name, 'Nome completo*' %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :cpf, 'CPF*' %>
+      <%= f.text_field :cpf, class: 'form-control signup-half' %>
+
+      <div id="signup-row">
+      	<div id="signup-city">
+      		<%= f.label :city, 'Cidade de residencia' %>
+      		<%= f.text_field :city, class: 'form-control' %>
+        </div>
+        <div id="signup-state">
+      		<%= f.label :state, 'Estado' %>
+      		<%= f.select :state, options_for_select(['RJ', 'SP']), {}, class: "form-control" %>
+      	</div>
+  	  </div>
+      <br>
+
+      <%= f.label :dob, 'Data de nascimento*' %>
+      <%= f.date_field :dob, class: 'form-control' %>
+
+      <%= f.label :allergy, 'Alergias' %>
+      <%= f.check_box :allergy,  {}, 'yes', 'no' %>
+
+      <%= f.text_field :allergyDescription, class: 'form-control', placeholder: 'Liste suas alergias', disabled: true %>
+
+      <%= f.label :surgery, 'Cirurgias' %>
+      <%= f.check_box :surgery, {}, 'yes', 'no'  %>
+
+      <%= f.text_field :surgeryDescription, class: 'form-control ', placeholder: 'Liste cirurgias passadas', disabled: true %>
+
+      <%= f.label :cancer, 'Historico de cancer na familia' %>
+      <%= f.check_box :cancer, {}, 'yes', 'no' %>
+
+      <%= f.text_field :cancerDescription, class: 'form-control', placeholder: 'Liste o tipo de cancer e o grau de parentesco', disabled: true %>
+
+      <%= f.label :asthma, 'Asma' %>
+      <%= f.check_box :asthma, {}, 'yes', 'no' %>
+  	  </br>
+
+      <%= f.label :bronquitis, 'Bonquite' %>
+      <%= f.check_box :bronquitis, {}, 'yes', 'no' %>
+      </br>
+
+      <%= f.label :diabetes, 'Diabetes' %>
+      <%= f.check_box :diabetes, {}, 'yes', 'no' %>
+      </br>
+
+      <%= f.label :hyperthyroidism, 'Hipertireoidismo' %>
+      <%= f.check_box :hyperthyroidism, {}, 'yes', 'no' %>
+      </br>
+
+      <%= f.label :hypothyroidism, 'Hipotireoidismo' %>
+      <%= f.check_box :hypothyroidism, {}, 'yes', 'no' %>
+      </br>
+
+      <%= f.label :highBloodPressure, 'Pressao alta' %>
+      <%= f.check_box :highBloodPressure, {}, 'yes', 'no' %>
+      </br>
+
+      <%= f.label :rhinitis, 'Rinite' %>
+      <%= f.check_box :rhinitis, {}, 'yes', 'no' %>
+      </br>
+
+      <%= f.label :comments, 'Comentarios adicionais' %>
+      <%= f.text_area :comments, class: 'form-control signup-comment', rows: '3' %>
+
+      <%= f.submit "Enviar", class: "btn btn-primary" %>
+    <% end %>
+</div>
+
+<%= javascript_include_tag "signup", "data-turbolinks-track" => true %>

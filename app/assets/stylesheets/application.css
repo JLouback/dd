@@ -13,27 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
- h1 {
-	text-align: left;
-}
-
-#contact-form {
-	margin-left: 15px;
-}
-
-#contact-submit {
-	margin-top: 20px;
-}
-
-#contact-name {
-	width: 70%;
-}
-
-#contact-email {
-	width: 70%;
-}
-
-#contact-message {
-	width: 70%;
-}
